@@ -1,0 +1,210 @@
+/*body*/
+body{
+    font-family: 'Ubuntu', sans-serif; /*fuente de texto*/
+    background: linear-gradient(#219BE4,#635AD9,#7338AC); /*fondo gradiente del body*/
+    display: flex; /*items en la misma linea*/
+    flex-direction: column; /*para cambiar de horizontal a vertical*/
+    min-height: 100vh; /*tamaño minimo del height 100% de la vista*/
+}
+/*header*/
+header{
+    display: flex; /*items en la misma linea*/
+    min-height: 4.5em; /*minimo de largo del header 4em*/
+    justify-content: space-between; /*items al inicio y final horizontal*/
+    align-items: center; /*centrar items en vertical*/
+    padding: 0 2em 0 1em; /*padding con 2em a la izquierda y 1em a la derecha*/
+}
+/*logo de bobby space*/
+.logo img{
+    height: 50px; /*tamaño del icono*/
+}
+/*titulo: encriptador de texto*/
+.titulo{
+    text-align: center; /*titulo centrado*/
+    font-weight: bold; /*letra en negrita*/
+    font-size: 1.8em; /*tamaño de la letra*/
+    color: white; /*color de la letra*/
+}
+/*div general*/
+.container{
+    width: 100%; /*ancho del contenedor*/
+    height: 80%; /*altura del contenedor*/
+    display: flex; /*divs alineados*/
+}
+/*items del div*/
+.item{
+    display:flex; /*alinear*/
+    flex-direction: column; /*items en columna*/
+    height: 100%; /*altura del item*/
+    align-items: center; /*centrar vertical*/
+    justify-content: center; /*centrar horizontal*/
+    position: relative; /*posicion relativa al div contenedor*/
+}
+/*div uno*/
+#uno{
+    width: 60%; /*tamaño del div uno*/
+}
+/*div dos*/
+#dos{
+    width: 40%; /*tamaño del div dos*/
+}
+/*cuadros de texto*/
+.texto-ingreso, .texto-salida{
+    width: 75%; /*tamaño del cuadro de texto en horizontal*/
+    padding: 0.5em 1em; /*padding del texto de los textarea*/
+    box-sizing: border-box; /*borde de la caja*/
+    border: 2px solid #66629d; /*propiedades del borde*/
+    border-radius: 10px; /*radio de 10px del textarea*/
+    background-color: #dbdada; /*fondo del textarea*/
+    resize: none; /*bloquear el cambio de tamaño*/
+    line-height: 1.5; /*espaciado de las lineas*/
+}
+/*textarea de ingreso*/
+.texto-ingreso{
+    height: 18em; /*tamaño personalizado de 18em*/
+    font-weight: bold; /*letra en negrita*/
+    font-size: 1.5em; /*tamaño del letra*/
+    color: darkblue; /*color de letra del textarea-ingreso*/
+    margin-top: 1.5em; /*margen en el top*/
+}
+/*placeholder del textarea ingreso*/
+.texto-ingreso::placeholder{
+    color: blue; /*color del placeholder en textarea-ingreso*/
+}
+/*focus del textarea ingreso*/
+.texto-ingreso:focus{
+    outline: 0.2em solid #004581; /*propiedades del outline en textarea-ingreso*/
+}
+/*textarea de salida*/
+.texto-salida{
+    height: 22em; /*tamaño personalizado de 22em*/
+    font-size: 1.4em; /*tamaño de letra*/
+    margin-top: 1em; /*margen en el top*/
+}
+/*focus del textarea de salida*/
+.texto-salida:focus{
+    outline: none; /*sin outline en el textarea-salida*/
+}
+/*main*/
+main {
+    flex: 1; /*elemento a lo largo de la pagina*/
+    display: flex; /*propiedad*/
+    align-items: center; /*centrar vertical*/
+    justify-content: center; /*centrar horizontal*/
+}
+/*texto de alerta*/
+.alerta{
+    padding: 1.5em 0; /*padding en el texto de alerta*/
+    font-size: 18px; /*tamaño de la fuente*/
+    font-weight: bold; /*texto en negrita*/
+    color: white; /*color del texto*/
+    text-align: center; /*texto centrado*/
+}
+/*alter del label*/
+.alerta.alter{
+    color: red; /*alter para .js*/
+}
+/*boton del div uno*/
+.botones{
+    padding: 0 0 1.5em 0; /*padding de los botones uno en y des*/
+    text-align: center; /*centrado*/
+}
+/*boton uno*/
+.boton-uno-en, .boton-uno-des, .boton-dos{
+    width: 15em; /*ancho de los botones*/
+    height: 2.5em; /*largo de los botones*/
+    font-size: 18px; /*tamaño de la letra de los botones*/
+    padding: 12px 24px; /*padding del boton*/
+    border-radius: 20px; /*radio del boton*/
+    background-color: #219BE4; /*color del boton*/
+    color: #fff; /*color de la letra*/
+    border: none; /*sin borde*/
+    transition: all 0.3s ease; /*transicion de la animacion*/
+    cursor: pointer; /*pointer del boton*/
+}
+/*margin de los botones uno*/
+.boton-uno-en, .boton-uno-des{
+    margin: 0 2em; /*margen del boton con 2em a los lados*/
+}
+/*hover de todos los botones*/
+.boton-uno-en:hover, .boton-uno-des:hover, .boton-dos:hover{
+    background-color: #2281b8; /*color del hover*/
+}
+/*active de todos los botones*/
+.boton-uno-en:active, .boton-uno-des:active, .boton-dos:active{
+    transform: translateY(3px); /*animacion de los botones*/
+}
+/*boton dos*/
+.boton-dos{
+    margin: 1.6em 0; /*margen del boton copiar con 1.6em arriba y abajo*/
+}
+/*alter del boton copiar*/
+.boton-dos.alter{
+    background-color: #16964b; /*alter para .js*/
+}
+/*footer*/
+footer{
+    padding: 1em; /*padding de 1em top left right y bottom*/
+    text-align: right; /*alinear texto a la derecha*/
+    margin-top: auto; /*pegar al top*/
+    color: white; /*color del texto*/
+    font-size: 1em; /*tamaño de la letra*/
+}
+
+@media (max-width: 600px){
+    .titulo{
+        font-size: 1.7em;
+    }
+    header{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .container{
+        padding: 0;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+    .item{
+        height: auto;
+    }
+    #uno, #dos{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .texto-ingreso, .texto-salida{
+        margin: 0;
+        height: 10em;
+        line-height: 1;
+        font-weight: 450;
+        font-size: 1.5em;
+    }
+    .alerta{
+        margin: 0;
+        padding: 0.5em 0 1em;
+        font-size: 1em;
+    }
+    .botones{
+        margin: 0 0 1em 0;
+        padding: 0;
+    }
+    .boton-uno-en, .boton-uno-des{
+        margin: 0.3em 0;
+        padding: 0;
+        font-size: 1em;
+    }
+    main{
+        padding: 0;
+        margin: 0;
+        flex: 1;
+    }
+    .boton-dos{
+        margin: 1em;
+        padding: 0;
+        font-size: 1em;
+    }
+}
